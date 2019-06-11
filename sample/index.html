@@ -52,6 +52,15 @@
             .then(editor => {
                 // CKEditorInspector.attach( editor );
 
+                editor.data.stringify = modelElementOrFragment => {
+                    const data = {
+                        root: modelElementOrFragment.toJSON(),
+                        children: Array.from( modelElementOrFragment.getChildren() ).map( child => child.toJSON() )
+                    };
+
+                    return JSON.stringify( data );
+                };
+
                 window.editor = editor;
             })
             .catch(err => {

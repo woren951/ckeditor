@@ -1,3 +1,6 @@
+// @ckeditor/ckeditor5-indent-block
+// @ckeditor/ckeditor5-word-count
+
 import CkeditorBase from '@ckeditor/ckeditor5-editor-classic/src/classiceditor';
 // import BalloonEditor from '@ckeditor/ckeditor5-editor-balloon/src/ballooneditor';
 // import InlineEditor from '@ckeditor/ckeditor5-editor-inline/src/inlineeditor';
