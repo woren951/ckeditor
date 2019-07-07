@@ -1,5 +1,4 @@
 // @ckeditor/ckeditor5-indent-block
-// @ckeditor/ckeditor5-word-count
 
 import CkeditorBase from '@ckeditor/ckeditor5-editor-classic/src/classiceditor';
 // import BalloonEditor from '@ckeditor/ckeditor5-editor-balloon/src/ballooneditor';
@@ -22,6 +21,7 @@ import ImageCaption from '@ckeditor/ckeditor5-image/src/imagecaption';
 import ImageStyle from '@ckeditor/ckeditor5-image/src/imagestyle';
 import ImageToolbar from '@ckeditor/ckeditor5-image/src/imagetoolbar';
 import ImageUpload from '@ckeditor/ckeditor5-image/src/imageupload';
+import Indent from '@ckeditor/ckeditor5-indent/src/indent';
 import Italic from '@ckeditor/ckeditor5-basic-styles/src/italic';
 import Link from '@ckeditor/ckeditor5-link/src/link';
 import List from '@ckeditor/ckeditor5-list/src/list';
@@ -34,8 +34,11 @@ import RemoveFormat from '@ckeditor/ckeditor5-remove-format/src/removeformat';
 import Strikethrough from '@ckeditor/ckeditor5-basic-styles/src/strikethrough';
 import Table from '@ckeditor/ckeditor5-table/src/table';
 import TableToolbar from '@ckeditor/ckeditor5-table/src/tabletoolbar';
+import TextTransformation from '@ckeditor/ckeditor5-typing/src/texttransformation';
 import Underline from '@ckeditor/ckeditor5-basic-styles/src/underline';
 import UploadAdapter from '@ckeditor/ckeditor5-adapter-ckfinder/src/uploadadapter';
+import WatchDog from '@ckeditor/ckeditor5-watchdog/src/watchdog';
+import WordCount from '@ckeditor/ckeditor5-word-count/src/wordcount';
 
 export default class Ckeditor extends CkeditorBase {}
 
@@ -57,6 +60,7 @@ Ckeditor.builtinPlugins = [
     ImageStyle,
     ImageToolbar,
     ImageUpload,
+    Indent,
     Italic,
     Link,
     List,
@@ -69,8 +73,11 @@ Ckeditor.builtinPlugins = [
     Strikethrough,
     Table,
     TableToolbar,
+    TextTransformation,
     Underline,
-    UploadAdapter
+    UploadAdapter,
+    WatchDog,
+    WordCount
 ];
 
 Ckeditor.defaultConfig = {
@@ -79,6 +86,9 @@ Ckeditor.defaultConfig = {
             'removeFormat',
             'undo',
             'redo',
+            '|',
+            'outdent',
+            'indent',
             '|',
             'heading',
             'alignment',
@@ -104,6 +114,8 @@ Ckeditor.defaultConfig = {
     blockToolbar: [
         'paragraph', 'heading1', 'heading2', 'heading3',
         '|',
+        'outdent', 'indent',
+        '|',
         'bulletedList', 'numberedList'
     ],
     alignment: {
@@ -121,6 +133,10 @@ Ckeditor.defaultConfig = {
             'imageTextAlternative'
         ]
     },
+    indentBlock: {
+        offset: 1,
+        unit: 'em'
+    },
     table: {
         contentToolbar: [
             'tableColumn',
@@ -129,5 +145,6 @@ Ckeditor.defaultConfig = {
             'mergeTableCells'
         ]
     },
-    language: 'uk'
+    language: 'uk',
+    additionalLanguages: 'all'
 };

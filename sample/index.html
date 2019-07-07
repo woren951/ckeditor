@@ -29,43 +29,69 @@
                 build</a> works fine.</p>
     </div>
 
+    <div id="word-count"></div>
+
     <script src="../build/ckeditor.js"></script>
     <!-- <script src="../node_modules/@ckeditor/ckeditor5-inspector/build/inspector.js"></script> -->
 
     <script>
         Ckeditor.create(document.querySelector('#editor'), {
-                mention: {
-                    feeds: [
-                        {
-                            marker: '@',
-                            feed: ['@Barney', '@Lily', '@Marshall', '@Robin', '@Ted'],
-                            minimumCharacters: 1
-                        },
-                        {
-                            marker: ':',
-                            feed: [':order', ':delivery'],
-                            minimumCharacters: 2
+            link: {
+                decorators: {
+                    addTargetToLinks: {
+                        mode: 'manual',
+                        label: 'Відкрити в новому вікні',
+                        attributes: {
+                            target: '_blank',
+                            rel: 'noopener noreferrer'
                         }
-                    ]
+                    },
+                    detectDownloadable: {
+                        mode: 'manual',
+                        label: 'Завантажування',
+                        attributes: {
+                            download: 'download'
+                        }
+                    }
                 }
-            })
-            .then(editor => {
-                // CKEditorInspector.attach( editor );
+            },
+            mention: {
+                feeds: [
+                    {
+                        marker: '@',
+                        feed: ['@Barney', '@Lily', '@Marshall', '@Robin', '@Ted'],
+                        minimumCharacters: 1
+                    },
+                    {
+                        marker: ':',
+                        feed: [':order', ':delivery'],
+                        minimumCharacters: 2
+                    }
+                ]
+            }
+        })
+        .then(editor => {
+            // CKEditorInspector.attach( editor );
 
-                editor.data.stringify = modelElementOrFragment => {
-                    const data = {
-                        root: modelElementOrFragment.toJSON(),
-                        children: Array.from( modelElementOrFragment.getChildren() ).map( child => child.toJSON() )
-                    };
+            const wordCountPlugin = editor.plugins.get( 'WordCount' );
+            const wordCountWrapper = document.getElementById( 'word-count' );
 
-                    return JSON.stringify( data );
+            wordCountWrapper.appendChild( wordCountPlugin.wordCountContainer );
+
+            editor.data.stringify = modelElementOrFragment => {
+                const data = {
+                    root: modelElementOrFragment.toJSON(),
+                    children: Array.from( modelElementOrFragment.getChildren() ).map( child => child.toJSON() )
                 };
 
-                window.editor = editor;
-            })
-            .catch(err => {
-                console.error(err.stack);
-            });
+                return JSON.stringify( data );
+            };
+
+            window.editor = editor;
+        })
+        .catch(err => {
+            console.error(err.stack);
+        });
     </script>
 
 </body>
