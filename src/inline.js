@@ -45,7 +45,7 @@ InlineEditor.defaultConfig = {
         ]
     },
     image: {
-        contentToolbar: [
+        toolbar: [
             'imageStyle:full',
             'imageStyle:side',
             '|',
