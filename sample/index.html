@@ -15,10 +15,10 @@
 
 <body>
 
-    <h1>CKEditor 5 – classic editor build – development sample</h1>
+    <h1>CKEditor 5</h1>
 
-    <div id="editor">
-        <h2>Sample</h2>
+    <div id="classic-editor">
+        <h2>Classic</h2>
 
         <p>This is an instance of the <a
                 href="https://docs.ckeditor.com/ckeditor5/latest/builds/guides/overview.html#classic-editor">classic
@@ -31,12 +31,35 @@
 
     <div id="word-count"></div>
 
+    <div id="inline-editor">
+        <h2>Inline</h2>
+
+        <p>This is an instance of the <a
+                href="https://docs.ckeditor.com/ckeditor5/latest/builds/guides/overview.html#classic-editor">classic
+                editor build</a>.</p>
+
+        <p>You can use this sample to validate whether your <a
+                href="https://docs.ckeditor.com/ckeditor5/latest/builds/guides/development/custom-builds.html">custom
+                build</a> works fine.</p>
+    </div>
+
+    <div id="balloon-editor">
+        <h2>Balloon</h2>
+
+        <p>This is an instance of the <a
+                href="https://docs.ckeditor.com/ckeditor5/latest/builds/guides/overview.html#classic-editor">classic
+                editor build</a>.</p>
+
+        <p>You can use this sample to validate whether your <a
+                href="https://docs.ckeditor.com/ckeditor5/latest/builds/guides/development/custom-builds.html">custom
+                build</a> works fine.</p>
+    </div>
+
     <script src="../build/ckeditor.js"></script>
     <!-- <script src="../node_modules/@ckeditor/ckeditor5-inspector/build/inspector.js"></script> -->
 
     <script>
-        Ckeditor.create(document.querySelector('#editor'), {
-            link: {
+        const link = {
                 decorators: {
                     addTargetToLinks: {
                         mode: 'manual',
@@ -54,21 +77,26 @@
                         }
                     }
                 }
-            },
-            mention: {
-                feeds: [
-                    {
-                        marker: '@',
-                        feed: ['@Barney', '@Lily', '@Marshall', '@Robin', '@Ted'],
-                        minimumCharacters: 1
-                    },
-                    {
-                        marker: ':',
-                        feed: [':order', ':delivery'],
-                        minimumCharacters: 2
-                    }
-                ]
-            }
+        };
+
+        const mention = {
+            feeds: [
+                {
+                    marker: '@',
+                    feed: ['@Barney', '@Lily', '@Marshall', '@Robin', '@Ted'],
+                    minimumCharacters: 1
+                },
+                {
+                    marker: ':',
+                    feed: [':order', ':delivery'],
+                    minimumCharacters: 2
+                }
+            ]
+        };
+
+        Ckeditor.ClassicEditor.create(document.querySelector('#classic-editor'), {
+            link: link,
+            mention: mention
         })
         .then(editor => {
             // CKEditorInspector.attach( editor );
@@ -78,16 +106,37 @@
 
             wordCountWrapper.appendChild( wordCountPlugin.wordCountContainer );
 
-            editor.data.stringify = modelElementOrFragment => {
-                const data = {
-                    root: modelElementOrFragment.toJSON(),
-                    children: Array.from( modelElementOrFragment.getChildren() ).map( child => child.toJSON() )
-                };
+            // editor.data.stringify = modelElementOrFragment => {
+            //     const data = {
+            //         root: modelElementOrFragment.toJSON(),
+            //         children: Array.from( modelElementOrFragment.getChildren() ).map( child => child.toJSON() )
+            //     };
 
-                return JSON.stringify( data );
-            };
+            //     return JSON.stringify( data );
+            // };
 
-            window.editor = editor;
+            window.classicEditor = editor;
+        })
+        .catch(err => {
+            console.error(err.stack);
+        });
+
+        Ckeditor.InlineEditor.create(document.querySelector('#inline-editor'))
+        .then(editor => {
+            // CKEditorInspector.attach( editor );
+            window.inlineEditor = editor;
+        })
+        .catch(err => {
+            console.error(err.stack);
+        });
+
+        Ckeditor.BalloonEditor.create(document.querySelector('#balloon-editor'), {
+            link: link,
+            mention: mention
+        })
+        .then(editor => {
+            // CKEditorInspector.attach( editor );
+            window.balloonEditor = editor;
         })
         .catch(err => {
             console.error(err.stack);
