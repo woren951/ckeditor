@@ -38,7 +38,7 @@ ClassicEditor.defaultConfig = {
         viewportTopOffset: 50
     },
     blockToolbar: [
-        'paragraph', 'heading1', 'heading2', 'heading3',
+        'link', 'paragraph', 'heading1', 'heading2', 'heading3',
         '|',
         'outdent', 'indent',
         '|',

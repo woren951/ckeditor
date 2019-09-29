@@ -20,7 +20,7 @@
     <div id="classic-editor">
         <h2>Classic</h2>
 
-        <p>This is an instance of the <a
+        <p>This is an instance of the lore <a
                 href="https://docs.ckeditor.com/ckeditor5/latest/builds/guides/overview.html#classic-editor">classic
                 editor build</a>.</p>
 
@@ -100,6 +100,24 @@
                 }
         };
 
+        const typing = {
+            transformations: {
+                extra: [
+                    { from: ':)', to: '🙂' },
+                    { from: ':+1:', to: '👍' },
+                    { from: ':tada:', to: '🎉' },
+                    {
+                        from: /(^|\s)(")([^"]*)(")$/,
+                        to: [ null, '«', null, '»' ]
+                    },
+                    {
+                        from: /(\. )([a-z]|[\wа-я])$/,
+                        to: matches => [ null, matches[ 1 ].toUpperCase() ]
+                    }
+                ],
+            }
+        };
+
         const mention = {
             feeds: [
                 {
@@ -117,7 +135,8 @@
 
         Ckeditor.ClassicEditor.create(document.querySelector('#classic-editor'), {
             link: link,
-            mention: mention
+            mention: mention,
+            typing: typing
         })
         .then(editor => {
             // CKEditorInspector.attach( editor );
@@ -142,7 +161,11 @@
             console.error(err.stack);
         });
 
-        Ckeditor.InlineEditor.create(document.querySelector('#inline-editor'))
+        Ckeditor.InlineEditor.create(document.querySelector('#inline-editor'), {
+            link: link,
+            mention: mention,
+            typing: typing
+        })
         .then(editor => {
             // CKEditorInspector.attach( editor );
             window.inlineEditor = editor;
@@ -153,7 +176,8 @@
 
         Ckeditor.BalloonEditor.create(document.querySelector('#balloon-editor'), {
             link: link,
-            mention: mention
+            mention: mention,
+            typing: typing
         })
         .then(editor => {
             // CKEditorInspector.attach( editor );

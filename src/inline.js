@@ -6,6 +6,7 @@ class InlineEditor extends InlineEditorBase {};
 InlineEditor.builtinPlugins = plugins;
 
 InlineEditor.defaultConfig = {
+    removePlugins: [ 'BlockToolbar' ],
     toolbar: {
         items: [
             'removeFormat',

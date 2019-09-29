@@ -6,6 +6,7 @@ class BalloonEditor extends BalloonEditorBase {};
 BalloonEditor.builtinPlugins = plugins;
 
 BalloonEditor.defaultConfig = {
+    removePlugins: [ 'BlockToolbar' ],
     toolbar: {
         items: [
             'removeFormat',
