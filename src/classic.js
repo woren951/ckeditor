@@ -22,6 +22,7 @@ ClassicEditor.defaultConfig = {
             'italic',
             'underline',
             'strikethrough',
+            'horizontalLine',
             '|',
             'code',
             '|',

@@ -29,8 +29,8 @@ import Heading from '@ckeditor/ckeditor5-heading/src/heading';
 import HeadingButtonsUI from '@ckeditor/ckeditor5-heading/src/headingbuttonsui';
 // highlight
 import Highlight from '@ckeditor/ckeditor5-highlight/src/highlight';
-// horizontalrule
-import HorizontalRule from '@ckeditor/ckeditor5-horizontal-rule/src/horizontalrule';
+// horizontalline
+import HorizontalLine from '@ckeditor/ckeditor5-horizontal-line/src/horizontalline';
 // image
 import Image from '@ckeditor/ckeditor5-image/src/image';
 import ImageToolbar from '@ckeditor/ckeditor5-image/src/imagetoolbar';
@@ -80,7 +80,7 @@ export default [
     Heading,
     HeadingButtonsUI,
     Highlight,
-    HorizontalRule,
+    HorizontalLine,
     Image,
     ImageCaption,
     ImageResize,

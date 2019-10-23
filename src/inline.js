@@ -23,6 +23,7 @@ InlineEditor.defaultConfig = {
             'italic',
             'underline',
             'strikethrough',
+            'horizontalLine',
             '|',
             'code',
             '|',
