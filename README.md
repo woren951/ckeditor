@@ -15,6 +15,7 @@ For users of Angular I recommend to use [official component](https://ckeditor.co
 [@ckeditor/ckeditor5-block-quote](https://github.com/ckeditor/ckeditor5-block-quote)<br/>
 [@ckeditor/ckeditor5-ckfinder](https://github.com/ckeditor/ckeditor5-ckfinder)<br/>
 [@ckeditor/ckeditor5-clipboard](https://github.com/ckeditor/ckeditor5-clipboard)<br/>
+[@ckeditor/ckeditor5-code-block](https://github.com/ckeditor/ckeditor5-code-block)<br/>
 [@ckeditor/ckeditor5-core](https://github.com/ckeditor/ckeditor5-core)<br/>
 [@ckeditor/ckeditor5-dev-utils](https://github.com/ckeditor/ckeditor5-dev-utils)<br/>
 [@ckeditor/ckeditor5-dev-webpack-plugin](https://github.com/ckeditor/ckeditor5-dev-webpack-plugin)<br/>
@@ -24,6 +25,7 @@ For users of Angular I recommend to use [official component](https://ckeditor.co
 [@ckeditor/ckeditor5-font](https://github.com/ckeditor/ckeditor5-font)<br/>
 [@ckeditor/ckeditor5-heading](https://github.com/ckeditor/ckeditor5-heading)<br/>
 [@ckeditor/ckeditor5-highlight](https://github.com/ckeditor/ckeditor5-highlight)<br/>
+[@ckeditor/ckeditor5-horizontal-rule](https://github.com/ckeditor/ckeditor5-horizontal-rule)<br/>
 [@ckeditor/ckeditor5-image](https://github.com/ckeditor/ckeditor5-image)<br/>
 [@ckeditor/ckeditor5-indent](https://github.com/ckeditor/ckeditor5-indent)<br/>
 [@ckeditor/ckeditor5-inspector](https://github.com/ckeditor/ckeditor5-inspector)<br/>
@@ -41,5 +43,4 @@ For users of Angular I recommend to use [official component](https://ckeditor.co
 [@ckeditor/ckeditor5-ui](https://github.com/ckeditor/ckeditor5-ui)<br/>
 [@ckeditor/ckeditor5-upload](https://github.com/ckeditor/ckeditor5-upload)<br/>
 [@ckeditor/ckeditor5-watchdog](https://github.com/ckeditor/ckeditor5-watchdog)<br/>
-[@ckeditor/ckeditor5-horizontal-rule](https://github.com/ckeditor/ckeditor5-horizontal-rule)<br/>
 [@ckeditor/ckeditor5-word-coun](https://github.com/ckeditor/ckeditor5-word-count)<br/>
