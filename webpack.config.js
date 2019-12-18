@@ -9,7 +9,6 @@
 
 const CKEditorWebpackPlugin = require('@ckeditor/ckeditor5-dev-webpack-plugin');
 const { bundler, styles } = require('@ckeditor/ckeditor5-dev-utils');
-const UglifyJsWebpackPlugin = require('uglifyjs-webpack-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
 const webpack = require('webpack');
 const path = require('path');
@@ -31,20 +30,6 @@ module.exports = {
         libraryTarget: 'umd',
         libraryExport: 'default'
     },
-
-    // optimization: {
-    //     minimizer: [
-    //         new UglifyJsWebpackPlugin({
-    //             sourceMap: true,
-    //             uglifyOptions: {
-    //                 output: {
-    //                     // Preserve CKEditor 5 license comments.
-    //                     comments: /^!/
-    //                 }
-    //             }
-    //         })
-    //     ]
-    // },
 
     optimization: {
         minimizer: [
