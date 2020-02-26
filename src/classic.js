@@ -107,8 +107,9 @@ ClassicEditor.defaultConfig = {
         contentToolbar: [
             'tableColumn',
             'tableRow',
-            '|',
-            'mergeTableCells'
+            'mergeTableCells',
+            'tableProperties',
+            'tableCellProperties'
         ]
     },
     language: 'uk',
