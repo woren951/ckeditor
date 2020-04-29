@@ -24,6 +24,8 @@ InlineEditor.defaultConfig = {
             'underline',
             'strikethrough',
             'horizontalLine',
+            'fontColor',
+            'fontBackgroundColor',
             '|',
             'link',
             'bulletedList',
@@ -34,7 +36,8 @@ InlineEditor.defaultConfig = {
             'insertTable',
             'imageUpload',
             'mediaEmbed',
-            'codeBlock'
+            'codeBlock',
+            'pageBreak'
         ],
         viewportTopOffset: 50
     },

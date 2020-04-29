@@ -34,9 +34,11 @@ For users of Angular I recommend to use [official component](https://ckeditor.co
 [@ckeditor/ckeditor5-markdown-gfm](https://github.com/ckeditor/ckeditor5-markdown-gfm)<br/>
 [@ckeditor/ckeditor5-media-embed](https://github.com/ckeditor/ckeditor5-media-embed)<br/>
 [@ckeditor/ckeditor5-mention](https://github.com/ckeditor/ckeditor5-mention)<br/>
+[@ckeditor/ckeditor5-page-break](https://github.com/ckeditor/ckeditor5-page-break)<br/>
 [@ckeditor/ckeditor5-paragraph](https://github.com/ckeditor/ckeditor5-paragraph)<br/>
 [@ckeditor/ckeditor5-paste-from-office](https://github.com/ckeditor/ckeditor5-paste-from-office)<br/>
 [@ckeditor/ckeditor5-remove-format](https://github.com/ckeditor/ckeditor5-remove-format)<br/>
+[@ckeditor/ckeditor5-select-all](https://github.com/ckeditor/ckeditor5-select-all)<br/>
 [@ckeditor/ckeditor5-table](https://github.com/ckeditor/ckeditor5-table)<br/>
 [@ckeditor/ckeditor5-theme-lark](https://github.com/ckeditor/ckeditor5-theme-lark)<br/>
 [@ckeditor/ckeditor5-typing](https://github.com/ckeditor/ckeditor5-typing)<br/>

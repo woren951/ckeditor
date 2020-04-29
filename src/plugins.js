@@ -5,7 +5,7 @@ import BlockQuote from '@ckeditor/ckeditor5-block-quote/src/blockquote';
 import BlockToolbar from '@ckeditor/ckeditor5-ui/src/toolbar/block/blocktoolbar';
 import Bold from '@ckeditor/ckeditor5-basic-styles/src/bold';
 import Code from '@ckeditor/ckeditor5-basic-styles/src/code';
-import CodeBlock from '@ckeditor/ckeditor5-code-block/src/CodeBlock';
+import CodeBlock from '@ckeditor/ckeditor5-code-block/src/codeblock';
 import EasyImage from '@ckeditor/ckeditor5-easy-image/src/easyimage';
 import Essentials from '@ckeditor/ckeditor5-essentials/src/essentials';
 import Font from '@ckeditor/ckeditor5-font/src/font';
@@ -25,18 +25,20 @@ import Link from '@ckeditor/ckeditor5-link/src/link';
 import List from '@ckeditor/ckeditor5-list/src/list';
 import MediaEmbed from '@ckeditor/ckeditor5-media-embed/src/mediaembed';
 import Mention from '@ckeditor/ckeditor5-mention/src/mention';
+import PageBreak from '@ckeditor/ckeditor5-page-break/src/pagebreak';
 import Paragraph from '@ckeditor/ckeditor5-paragraph/src/paragraph';
 import ParagraphButtonUI from '@ckeditor/ckeditor5-paragraph/src/paragraphbuttonui';
 import PasteFromOffice from '@ckeditor/ckeditor5-paste-from-office/src/pastefromoffice';
 import RemoveFormat from '@ckeditor/ckeditor5-remove-format/src/removeformat';
+import SelectAll from '@ckeditor/ckeditor5-select-all/src/selectall';
 import SimpleUploadAdapter from '@ckeditor/ckeditor5-upload/src/adapters/simpleuploadadapter';
 import Strikethrough from '@ckeditor/ckeditor5-basic-styles/src/strikethrough';
 import Subscript from '@ckeditor/ckeditor5-basic-styles/src/subscript';
 import Superscript from '@ckeditor/ckeditor5-basic-styles/src/superscript';
 import Table from '@ckeditor/ckeditor5-table/src/table';
-import TableToolbar from '@ckeditor/ckeditor5-table/src/tabletoolbar';
-import TableProperties from '@ckeditor/ckeditor5-table/src/tableproperties';
 import TableCellProperties from '@ckeditor/ckeditor5-table/src/tablecellproperties';
+import TableProperties from '@ckeditor/ckeditor5-table/src/tableproperties';
+import TableToolbar from '@ckeditor/ckeditor5-table/src/tabletoolbar';
 import TextTransformation from '@ckeditor/ckeditor5-typing/src/texttransformation';
 import TodoList from '@ckeditor/ckeditor5-list/src/todolist';
 import Underline from '@ckeditor/ckeditor5-basic-styles/src/underline';
@@ -72,18 +74,20 @@ export default [
     List,
     MediaEmbed,
     Mention,
+    PageBreak,
     Paragraph,
     ParagraphButtonUI,
     PasteFromOffice,
     RemoveFormat,
+    SelectAll,
     SimpleUploadAdapter,
     Strikethrough,
     Subscript,
     Superscript,
     Table,
-    TableToolbar,
-    TableProperties,
     TableCellProperties,
+    TableProperties,
+    TableToolbar,
     TextTransformation,
     TodoList,
     Underline,

@@ -23,6 +23,8 @@ ClassicEditor.defaultConfig = {
             'underline',
             'strikethrough',
             'horizontalLine',
+            'fontColor',
+            'fontBackgroundColor',
             '|',
             'link',
             'bulletedList',
@@ -33,7 +35,8 @@ ClassicEditor.defaultConfig = {
             'insertTable',
             'imageUpload',
             'mediaEmbed',
-            'codeBlock'
+            'codeBlock',
+            'pageBreak'
         ],
         viewportTopOffset: 50
     },
