@@ -102,10 +102,23 @@
 
         const typing = {
             transformations: {
+                include: [
+                    // Use only the 'typography', 'symbols' and 'mathematical' groups.
+                    'typography',
+                    'symbols',
+                    'mathematical'
+                ],
+                remove: [
+                    // Remove the 'quotes' transformation loaded by the 'typography' group.
+                    'quotes'
+                ],
                 extra: [
                     { from: ':)', to: '🙂' },
                     { from: ':+1:', to: '👍' },
                     { from: ':tada:', to: '🎉' },
+                    { from: ':flag_ua:', to: '🇺🇦' },
+                    { from: '<<', to: '«' },
+                    { from: '>>', to: '»' },
                     {
                         from: /(^|\s)(")([^"]*)(")$/,
                         to: [ null, '«', null, '»' ]

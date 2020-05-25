@@ -36,6 +36,7 @@ ClassicEditor.defaultConfig = {
             'imageUpload',
             'mediaEmbed',
             'codeBlock',
+            'selectAll',
             'pageBreak'
         ],
         viewportTopOffset: 50
@@ -45,7 +46,9 @@ ClassicEditor.defaultConfig = {
         '|',
         'outdent', 'indent',
         '|',
-        'bulletedList', 'numberedList'
+        'bulletedList', 'numberedList',
+        '|',
+        'selectAll'
     ],
     alignment: {
         options: [

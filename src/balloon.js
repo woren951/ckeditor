@@ -37,6 +37,7 @@ BalloonEditor.defaultConfig = {
             'imageUpload',
             'mediaEmbed',
             'codeBlock',
+            'selectAll',
             'pageBreak'
         ],
         viewportTopOffset: 50
