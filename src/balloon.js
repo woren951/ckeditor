@@ -92,9 +92,17 @@ BalloonEditor.defaultConfig = {
     image: {
         toolbar: [
             'imageStyle:full',
-            'imageStyle:side',
+            'imageStyle:alignLeft',
+            'imageStyle:alignRight',
             '|',
-            'imageTextAlternative'
+            'imageTextAlternative',
+            '|',
+            'linkImage'
+        ],
+        styles: [
+            'full',
+            'alignLeft',
+            'alignRight'
         ]
     },
     indentBlock: {

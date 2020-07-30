@@ -22,6 +22,7 @@ import Indent from '@ckeditor/ckeditor5-indent/src/indent';
 import IndentBlock from '@ckeditor/ckeditor5-indent/src/indentblock';
 import Italic from '@ckeditor/ckeditor5-basic-styles/src/italic';
 import Link from '@ckeditor/ckeditor5-link/src/link';
+import LinkImage from '@ckeditor/ckeditor5-link/src/linkimage';
 import List from '@ckeditor/ckeditor5-list/src/list';
 import MediaEmbed from '@ckeditor/ckeditor5-media-embed/src/mediaembed';
 import Mention from '@ckeditor/ckeditor5-mention/src/mention';
@@ -71,6 +72,7 @@ export default [
     IndentBlock,
     Italic,
     Link,
+    LinkImage,
     List,
     MediaEmbed,
     Mention,
