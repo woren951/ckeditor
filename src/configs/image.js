@@ -10,6 +10,11 @@ export default {
         '|',
         'imageResize'
     ],
+    upload: {
+        panel: {
+            items: [ 'insertImageViaUrl' ]
+        }
+    },
     styles: [
         'full',
         'alignLeft',
