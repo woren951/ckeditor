@@ -37,6 +37,7 @@ InlineEditor.defaultConfig = {
             'imageUpload',
             'mediaEmbed',
             'codeBlock',
+            'htmlEmbed',
             'selectAll',
             'horizontalLine',
             'pageBreak'
