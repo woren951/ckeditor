@@ -1,5 +1,6 @@
 import Alignment from '@ckeditor/ckeditor5-alignment/src/alignment';
 import Autoformat from '@ckeditor/ckeditor5-autoformat/src/autoformat';
+import AutoLink from '@ckeditor/ckeditor5-link/src/autolink';
 import Base64UploadAdapter from '@ckeditor/ckeditor5-upload/src/adapters/base64uploadadapter';
 import BlockQuote from '@ckeditor/ckeditor5-block-quote/src/blockquote';
 import BlockToolbar from '@ckeditor/ckeditor5-ui/src/toolbar/block/blocktoolbar';
@@ -55,6 +56,7 @@ import WordCount from '@ckeditor/ckeditor5-word-count/src/wordcount';
 export default [
     Alignment,
     Autoformat,
+    AutoLink,
     Base64UploadAdapter,
     BlockQuote,
     BlockToolbar,

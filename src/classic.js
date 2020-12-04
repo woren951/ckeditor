@@ -35,8 +35,8 @@ ClassicEditor.defaultConfig = {
             'insertTable',
             'imageUpload',
             'mediaEmbed',
-            'codeBlock',
             'htmlEmbed',
+            'codeBlock',
             'selectAll',
             'horizontalLine',
             'pageBreak'
