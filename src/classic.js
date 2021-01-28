@@ -2,44 +2,28 @@ import ClassicEditorBase from '@ckeditor/ckeditor5-editor-classic/src/classicedi
 import plugins from './plugins';
 import { alignment, heading, codeBlock, image, indentBlock, table } from './configs';
 
+// import SimpleBox from './simplebox/simplebox';
+
 class ClassicEditor extends ClassicEditorBase {};
+
+// plugins.push(SimpleBox);
 
 ClassicEditor.builtinPlugins = plugins;
 
 ClassicEditor.defaultConfig = {
     toolbar: {
         items: [
-            'removeFormat',
-            'undo',
-            'redo',
+            'removeFormat', 'undo', 'redo', /* 'simpleBox', */
             '|',
-            'outdent',
-            'indent',
+            'outdent', 'indent',
             '|',
-            'heading',
-            'alignment',
+            'heading', 'alignment',
             '|',
-            'bold',
-            'italic',
-            'underline',
-            'strikethrough',
-            'fontColor',
-            'fontBackgroundColor',
+            'bold', 'italic', 'underline', 'strikethrough', 'fontColor', 'fontBackgroundColor',
             '|',
-            'link',
-            'bulletedList',
-            'numberedList',
-            'todoList',
+            'link', 'bulletedList', 'numberedList', 'todoList',
             '|',
-            'blockQuote',
-            'insertTable',
-            'imageUpload',
-            'mediaEmbed',
-            'htmlEmbed',
-            'codeBlock',
-            'selectAll',
-            'horizontalLine',
-            'pageBreak'
+            'blockQuote', 'insertTable', 'imageUpload', 'mediaEmbed', 'htmlEmbed', 'codeBlock', 'selectAll', 'horizontalLine', 'pageBreak'
         ],
         viewportTopOffset: 50
     },
