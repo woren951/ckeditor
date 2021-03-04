@@ -34,7 +34,6 @@ InlineEditor.defaultConfig = {
             '|',
             'blockQuote',
             'insertTable',
-            'imageUpload',
             'mediaEmbed',
             'htmlEmbed',
             'codeBlock',

@@ -8,7 +8,7 @@ export default {
         '|',
         'linkImage',
         '|',
-        'imageResize'
+        'resizeImage'
     ],
     upload: {
         panel: {
@@ -22,17 +22,17 @@ export default {
     ],
     resizeOptions: [
         {
-            name: 'imageResize:original',
+            name: 'resizeImage:original',
             value: null,
             icon: 'original'
         },
         {
-            name: 'imageResize:75',
+            name: 'resizeImage:75',
             value: '75',
             icon: 'large'
         },
         {
-            name: 'imageResize:50',
+            name: 'resizeImage:50',
             value: '50',
             icon: 'medium'
         }

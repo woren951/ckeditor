@@ -63,7 +63,6 @@ export default [
     Bold,
     Code,
     CodeBlock,
-    EasyImage,
     Essentials,
     Font,
     Heading,

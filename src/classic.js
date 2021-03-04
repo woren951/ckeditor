@@ -23,7 +23,7 @@ ClassicEditor.defaultConfig = {
             '|',
             'link', 'bulletedList', 'numberedList', 'todoList',
             '|',
-            'blockQuote', 'insertTable', 'imageUpload', 'mediaEmbed', 'htmlEmbed', 'codeBlock', 'selectAll', 'horizontalLine', 'pageBreak'
+            'blockQuote', 'insertTable', 'mediaEmbed', 'htmlEmbed', 'codeBlock', 'selectAll', 'horizontalLine', 'pageBreak'
         ],
         viewportTopOffset: 50
     },
