@@ -172,6 +172,23 @@
         </div>
     </div>
 
+    <div class="update">
+        <div id="simple-editor">
+            <p>You can use this sample to validate whether your <a
+                href="https://docs.ckeditor.com/ckeditor5/latest/builds/guides/development/custom-builds.html">custom
+                build</a> works fine.</p>
+        </div>
+
+        <div class="update__controls">
+            <span class="update__words"></span>
+            <svg class="update__chart" viewbox="0 0 40 40" width="40" height="40" xmlns="http://www.w3.org/2000/svg">
+                <circle stroke="hsl(0, 0%, 93%)" stroke-width="3" fill="none" cx="20" cy="20" r="17" />
+                <circle class="update__chart__circle" stroke="hsl(202, 92%, 59%)" stroke-width="3" stroke-dasharray="134,534" stroke-linecap="round" fill="none" cx="20" cy="20" r="17" />
+                <text class="update__chart__characters" x="50%" y="50%" dominant-baseline="central" text-anchor="middle"></text>
+            </svg>
+        </div>
+    </div>
+
     <script src="../build/ckeditor.js"></script>
     <!-- <script src="../node_modules/@ckeditor/ckeditor5-inspector/build/inspector.js"></script> -->
 
@@ -396,6 +413,54 @@
         .then(editor => {
             // CKEditorInspector.attach( editor );
             window.balloonEditor = editor;
+        })
+        .catch(err => {
+            console.error(err.stack);
+        });
+
+        const simpleEditorElement = document.querySelector('#simple-editor');
+        const simpleEditorWordCount = {
+            container: simpleEditorElement.parentElement,
+            progressCircle: simpleEditorElement.parentElement.querySelector( '.update__chart__circle' ),
+            charactersBox: simpleEditorElement.parentElement.querySelector( '.update__chart__characters' ),
+            wordsBox: simpleEditorElement.parentElement.querySelector( '.update__words' ),
+            circleCircumference: Math.floor( 2 * Math.PI * simpleEditorElement.parentElement.querySelector( '.update__chart__circle' ).getAttribute( 'r' ) )
+        };
+
+        Ckeditor.SimpleEditor.create(simpleEditorElement, {
+            link: link,
+            typing: typing,
+            wordCount: {
+                onUpdate: stats => {
+                    const charactersProgress = stats.characters / maxCharacters * simpleEditorWordCount.circleCircumference;
+                    const isLimitExceeded = stats.characters > maxCharacters;
+                    const isCloseToLimit = !isLimitExceeded && stats.characters > maxCharacters * .8;
+                    const circleDashArray = Math.min( charactersProgress, simpleEditorWordCount.circleCircumference );
+
+                    // Set the stroke of the circle to show how many characters were typed.
+                    simpleEditorWordCount.progressCircle.setAttribute( 'stroke-dasharray', `${ circleDashArray },${ simpleEditorWordCount.circleCircumference }` );
+
+                    // Display the number of characters in the progress chart. When the limit is exceeded,
+                    // display how many characters should be removed.
+                    if ( isLimitExceeded ) {
+                        simpleEditorWordCount.charactersBox.textContent = `-${ stats.characters - maxCharacters }`;
+                    } else {
+                        simpleEditorWordCount.charactersBox.textContent = stats.characters;
+                    }
+
+                    simpleEditorWordCount.wordsBox.textContent = `Words in the post: ${ stats.words }`;
+
+                    // If the content length is close to the character limit, add a CSS class to warn the user.
+                    simpleEditorWordCount.container.classList.toggle( 'demo-update__limit-close', isCloseToLimit );
+
+                    // If the character limit is exceeded, add a CSS class that makes the content's background red.
+                    simpleEditorWordCount.container.classList.toggle( 'demo-update__limit-exceeded', isLimitExceeded );
+                }
+            }
+        })
+        .then(editor => {
+            // CKEditorInspector.attach( editor );
+            window.simpleEditor = editor;
         })
         .catch(err => {
             console.error(err.stack);
