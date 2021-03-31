@@ -1,4 +1,4 @@
-import BalloonEditorBase from '@ckeditor/ckeditor5-editor-balloon/src/ballooneditor';
+import ClassicEditorBase from '@ckeditor/ckeditor5-editor-classic/src/classiceditor';
 
 import Autoformat from '@ckeditor/ckeditor5-autoformat/src/autoformat';
 import AutoLink from '@ckeditor/ckeditor5-link/src/autolink';
@@ -15,7 +15,7 @@ import TextTransformation from '@ckeditor/ckeditor5-typing/src/texttransformatio
 import Underline from '@ckeditor/ckeditor5-basic-styles/src/underline';
 import WordCount from '@ckeditor/ckeditor5-word-count/src/wordcount';
 
-class SimpleEditor extends BalloonEditorBase {};
+class SimpleEditor extends ClassicEditor {};
 
 SimpleEditor.builtinPlugins = [
     Autoformat,
@@ -43,7 +43,8 @@ SimpleEditor.defaultConfig = {
             'underline',
             'strikethrough',
             'link',
-            'bulletedList'
+            'bulletedList',
+            'numberedList'
         ],
         viewportTopOffset: 50
     },
