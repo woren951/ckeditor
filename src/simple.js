@@ -1,4 +1,4 @@
-import ClassicEditorBase from '@ckeditor/ckeditor5-editor-classic/src/classiceditor';
+import ClassicEditor from '@ckeditor/ckeditor5-editor-classic/src/classiceditor';
 
 import Autoformat from '@ckeditor/ckeditor5-autoformat/src/autoformat';
 import AutoLink from '@ckeditor/ckeditor5-link/src/autolink';
