@@ -305,14 +305,16 @@
         .then(editor => {
             // CKEditorInspector.attach( editor );
 
-            // editor.data.stringify = modelElementOrFragment => {
-            //     const data = {
-            //         root: modelElementOrFragment.toJSON(),
-            //         children: Array.from( modelElementOrFragment.getChildren() ).map( child => child.toJSON() )
-            //     };
+            editor.data.stringify = modelElementOrFragment => {
+                const data = {
+                    root: modelElementOrFragment.toJSON(),
+                    children: Array.from( modelElementOrFragment.getChildren() ).map( child => child.toJSON() )
+                };
 
-            //     return JSON.stringify( data );
-            // };
+                console.log(data);
+
+                return JSON.stringify( data );
+            };
 
             window.classicEditor = editor;
         })
