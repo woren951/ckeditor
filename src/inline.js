@@ -40,8 +40,7 @@ InlineEditor.defaultConfig = {
             'selectAll',
             'horizontalLine',
             'pageBreak'
-        ],
-        viewportTopOffset: 50
+        ]
     },
     alignment,
     heading,
@@ -49,6 +48,11 @@ InlineEditor.defaultConfig = {
     image,
     indentBlock,
     table,
+    ui: {
+        viewportOffset: {
+            top: 50
+        }
+    },
     language: 'uk',
     additionalLanguages: 'all'
 };

@@ -1,9 +1,12 @@
 export default {
     toolbar: [
-        'imageStyle:full',
+        'imageStyle:inline',
+        '|',
         'imageStyle:alignLeft',
+        'imageStyle:alignCenter',
         'imageStyle:alignRight',
         '|',
+        'toggleImageCaption',
         'imageTextAlternative',
         '|',
         'linkImage',
@@ -15,11 +18,6 @@ export default {
             items: [ 'insertImageViaUrl' ]
         }
     },
-    styles: [
-        'full',
-        'alignLeft',
-        'alignRight'
-    ],
     resizeOptions: [
         {
             name: 'resizeImage:original',

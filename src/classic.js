@@ -24,8 +24,7 @@ ClassicEditor.defaultConfig = {
             'link', 'bulletedList', 'numberedList', 'todoList',
             '|',
             'blockQuote', 'insertTable', 'mediaEmbed', 'htmlEmbed', 'codeBlock', 'selectAll', 'horizontalLine', 'pageBreak'
-        ],
-        viewportTopOffset: 50
+        ]
     },
     blockToolbar: [
         'link', 'paragraph', 'heading1', 'heading2', 'heading3',
@@ -42,6 +41,11 @@ ClassicEditor.defaultConfig = {
     image,
     indentBlock,
     table,
+    ui: {
+        viewportOffset: {
+            top: 50
+        }
+    },
     language: 'uk',
     additionalLanguages: 'all'
 };

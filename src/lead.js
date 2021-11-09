@@ -41,8 +41,12 @@ LeadEditor.defaultConfig = {
             'underline',
             'strikethrough',
             'link'
-        ],
-        viewportTopOffset: 50
+        ]
+    },
+    ui: {
+        viewportOffset: {
+            top: 50
+        }
     },
     language: 'uk',
     additionalLanguages: 'all'

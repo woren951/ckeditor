@@ -45,8 +45,12 @@ SimpleEditor.defaultConfig = {
             'link',
             'bulletedList',
             'numberedList'
-        ],
-        viewportTopOffset: 50
+        ]
+    },
+    ui: {
+        viewportOffset: {
+            top: 50
+        }
     },
     language: 'uk',
     additionalLanguages: 'all'
